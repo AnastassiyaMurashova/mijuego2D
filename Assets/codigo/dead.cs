@@ -22,7 +22,7 @@ public class dead : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        Debug.Log(contadorTrigger);
+        // Debug.Log(contadorTrigger);
         
     }
 
