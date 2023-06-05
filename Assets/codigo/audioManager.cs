@@ -30,7 +30,7 @@ public class audioManager : MonoBehaviour {
         if(scriptDuplicado == null){
             scriptDuplicado = this.gameObject;
         }else if(scriptDuplicado != null){
-            DestroyObject(this.gameObject);
+            Destroy(this.gameObject);
         }
 
     } // Fin de Awake
