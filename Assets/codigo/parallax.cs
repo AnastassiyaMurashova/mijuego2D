@@ -7,17 +7,17 @@ public class parallax : MonoBehaviour {
 
     public GameObject Personaje;
 
+    public GameObject FondoPlanetas;
+
+    //public GameObject FondoArboles;
+
     public GameObject FondoNubes;
-
-    public GameObject FondoArboles;
-
-    public GameObject ArbolGrande;
 
     public static string DireccionPersonaje;
 
+    public float VelocidadPlanetas = 0f;
+    //public float VelocidadArboles = 0f;
     public float VelocidadNubes = 0f;
-    public float VelocidadArboles = 0f;
-    public float VelocidadArbolGrande = 0f;
 
 
     
@@ -30,27 +30,27 @@ public class parallax : MonoBehaviour {
     void Update() {
 
         if(DireccionPersonaje == "derecha"){
-            VelocidadNubes -= 0.002f;
-            VelocidadArboles -= 0.001f;
-            VelocidadArbolGrande -= 0.001f;
+            VelocidadPlanetas -= 0.001f;
+            //VelocidadArboles -= 0.001f;
+            VelocidadNubes -= 0.001f;
 
         }
         if(DireccionPersonaje == "izquierda"){
-            VelocidadNubes += 0.002f;
-            VelocidadArboles += 0.001f;
-            VelocidadArbolGrande += 0.001f;
+            VelocidadPlanetas += 0.001f;
+            //VelocidadArboles += 0.001f;
+            VelocidadNubes += 0.001f;
 
         }
         if(DireccionPersonaje == "parado"){
+            VelocidadPlanetas = 0.0f;
+            //VelocidadArboles = 0.0f;
             VelocidadNubes = 0.0f;
-            VelocidadArboles = 0.0f;
-            VelocidadArbolGrande = 0.0f;
 
         }
 
+      FondoPlanetas.transform.Translate(VelocidadPlanetas*Time.deltaTime,0,0); 
+      //FondoArboles.transform.Translate(VelocidadArboles*Time.deltaTime,0,0);
       FondoNubes.transform.Translate(VelocidadNubes*Time.deltaTime,0,0); 
-      FondoArboles.transform.Translate(VelocidadArboles*Time.deltaTime,0,0); 
-      ArbolGrande.transform.Translate(VelocidadArbolGrande*Time.deltaTime,0,0); 
 
     }
 }

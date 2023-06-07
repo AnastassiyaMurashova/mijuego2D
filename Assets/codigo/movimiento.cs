@@ -6,7 +6,7 @@ public class movimiento : MonoBehaviour {
 
     public static float Speed = 4f;
     public bool ActivaSalto = true;
-    public float Salto = 5;
+    public float Salto = 6;
 
     public Animator controlAnimacion;
 

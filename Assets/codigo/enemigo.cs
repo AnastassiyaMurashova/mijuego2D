@@ -64,9 +64,6 @@ void Update(){
             player.transform.position = new Vector2 (-0.44f,-0.45f);
             gestorSonido.GetComponent<audioManager>().sonidoDead(); 
         }
-
-
-
     }
 
         
